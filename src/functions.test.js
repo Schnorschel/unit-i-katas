@@ -20,12 +20,27 @@
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
-// ...
+const findLongestWord = string => {
+  let maxLengthWord = ''
+  const words = string.split(' ')
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLengthWord.length) {
+      maxLengthWord = words[i]
+    }
+  }
+  return maxLengthWord
+}
 
 /*
  * 2) Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
+
+const sumOfArray = numbers => {
+  return numbers.reduce((total, number) => {
+    return (total += number)
+  }, 0)
+}
 
 /**
  *
@@ -34,8 +49,17 @@
       Your function should return true if the array contains the value, false if not.
  */
 
+const doesContain = (array, value) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true
+    }
+  }
+  return false
+}
+
 /**
- * 4) defined a function called maps. This takes 1 argument, an array or numbers. 
+ * 4) Define a function called maps. This takes 1 argument, an array of numbers. 
  * Your function should return a new array with each value doubled.
     For example:
 
@@ -45,14 +69,26 @@
  *    
  */
 
+const maps = numbers => {
+  return numbers.map(number => {
+    return number * 2
+  })
+}
+
 /**
  * 5) Write a function called noSpace. This function takes one argument, a string. 
  *    This function should return the string with no spaces. 
  *    For example: 
  *    noSpace("This is a my cool thing") should return "Thisisamycoolthing"
 
+*/
 
+const noSpace = string => {
+  return string.replace(/ /g, '')
+}
 /**
+ *
+ *
  * NOTE: Don't modify anything below this line...
  */
 
