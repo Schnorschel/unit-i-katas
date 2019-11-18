@@ -36,17 +36,17 @@ const findLongestWord = string => {
  * all the numbers in an array.
  */
 
-// const sumOfArray = numbers => {
-//   return numbers.reduce((total, number) => {
-//     return (total += number)
-//   }, 0)
-// }
-
 const sumOfArray = numbers => {
   return numbers.reduce((total, number) => {
     return (total += number)
   }, 0)
 }
+
+// const sumOfArray = numbers => {
+//   return numbers.reduce((total, number) => {
+//     return (total += number)
+//   }, 0)
+// }
 
 /**
  *
